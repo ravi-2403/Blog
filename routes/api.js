@@ -10,7 +10,8 @@ const spath = path.join(__dirname);
 
 //Home route
 router.get('/',(req, res)=>{
-    res.sendFile("/home/ravi/Desktop/BlogApi/public/index.html")
+    // res.sendFile("/home/ravi/Desktop/BlogApi/public/index.html")
+    res.send("Ravi Kumar Blog's API. Documentation will be available soon.")
 })
 
 //getting all
