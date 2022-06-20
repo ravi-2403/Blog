@@ -4,7 +4,7 @@ const blogDetalis = require('../models/blog')
 
 
 //getting all
-router.get('/my-blog-data',async (req, res)=>{
+router.get('/api',async (req, res)=>{
     try{
         const response = await blogDetalis.find();
         res.json(response)
@@ -12,5 +12,6 @@ router.get('/my-blog-data',async (req, res)=>{
         res.status(500).json({message:error.message})
     }
 })
+
 
 module.exports=router
