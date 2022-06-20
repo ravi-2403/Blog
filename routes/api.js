@@ -3,6 +3,11 @@ const router = express.Router();
 const blogDetalis = require('../models/blog')
 
 
+router.get('/',(req, res)=>{
+    res.send(<h1>Ravi Kumar's Blog API documentation will be available soon.</h1>)
+})
+
+
 //getting all
 router.get('/api',async (req, res)=>{
     try{
