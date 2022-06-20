@@ -1,12 +1,17 @@
-const express = require('express')
+const express = require('express');
+const app = express();
+const path = require('path');
 const router = express.Router();
-const blogDetalis = require('../models/blog')
+const blogDetalis = require('../models/blog');
 
+app.use(express.static(path.join(__dirname+'public')));
 
+const spath = path.join(__dirname);
+
+//Home route
 router.get('/',(req, res)=>{
-    res.send(<h1>Ravi Kumar's Blog API documentation will be available soon.</h1>)
+    res.sendFile("/home/ravi/Desktop/BlogApi/public/index.html")
 })
-
 
 //getting all
 router.get('/api',async (req, res)=>{
