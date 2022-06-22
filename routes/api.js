@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname+'public')));
 //Home route
 router.get('/',(req, res)=>{
     // res.sendFile((spath+"/public/index.html"));
-    res.send("Ravi Kumar Blog's API. Documentation will be available soon.")
+    res.send("Ravi Kumar Blog's API. Documentation will be made available soon.")
 })
 
 //getting all
