@@ -17,11 +17,16 @@ router.get('/',(req, res)=>{
 //getting all
 router.get('/api',async (req, res)=>{
     try{
-        const response = await blogDetalis.find();
-        res.json(response)
+        const response = await blogDetalis.find().lean();
+        const newresponse = JSON.parse(JSON.stringify(response))
+        newresponse.map((ele) =>{
+                delete ele._id;
+                delete ele.__v;
+        })
+        res.send(newresponse);
     }catch(error){
         res.status(500).json({message:error.message})
-    }
+    }   
 })
 
 
