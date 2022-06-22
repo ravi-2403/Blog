@@ -6,12 +6,12 @@ const blogDetalis = require('../models/blog');
 
 app.use(express.static(path.join(__dirname+'public')));
 
-const spath = path.join(__dirname);
+// const spath = path.join(__dirname);
 
 //Home route
 router.get('/',(req, res)=>{
-    res.sendFile((spath+"/public/index.html"));
-    // res.send("Ravi Kumar Blog's API. Documentation will be available soon.")
+    // res.sendFile((spath+"/public/index.html"));
+    res.send("Ravi Kumar Blog's API. Documentation will be available soon.")
 })
 
 //getting all
