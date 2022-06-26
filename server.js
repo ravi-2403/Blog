@@ -24,10 +24,7 @@ mongoose.connection.on('connected',()=>{
 
 // const blogDetail = mongoose.model('Blog',blogSchema);
 
-
 app.use('/',route);
-
-
 
 app.listen(port,()=>{
     console.log("Listening to port number ",port);

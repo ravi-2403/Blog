@@ -23,7 +23,7 @@ router.get('/api',async (req, res)=>{
                 delete ele._id;
                 delete ele.__v;
         })
-        res.send(newresponse);
+        res.status(200).json(newresponse);
     }catch(error){
         res.status(500).json({message:error.message})
     }   
